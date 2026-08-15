@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07070b">
+<meta name="robots" content="noindex">
+<title>404 — Page not found</title>
+<style>
+:root{--bg:#07070b;--card:#101017;--line:#292933;--text:#f5f5f7;--muted:#9b9ba9;--a:#9b7cff;--pink:#ff55b8}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;opacity:.3;width:480px;height:480px;top:-160px;right:-160px;background:radial-gradient(circle,#8d72ff,transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:420px}
+.code{font-size:clamp(64px,14vw,120px);font-weight:900;line-height:1;letter-spacing:-4px;background:linear-gradient(100deg,#fff 15%,#ad98ff 52%,#ff6ac2);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:22px;margin:14px 0 8px;letter-spacing:-.5px}
+p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:13px;background:linear-gradient(135deg,#8d72ff,#c44ba9);color:#fff;text-decoration:none;font-weight:800;font-size:14px}
+.hint{margin-top:18px;font-size:12px;color:#63636f}
+</style>
+</head>
+<body>
+<div class="bg-blob"></div>
+<div class="wrap">
+ <div class="code">404</div>
+ <h1>Page not found.</h1>
+ <p>This page doesn't exist or was moved. You'll be redirected to the homepage shortly.</p>
+ <a class="btn" href="index.html">Go to homepage →</a>
+ <div class="hint" id="hint">Redirecting in 4s…</div>
+</div>
+<script>
+var s=4;
+var hint=document.getElementById("hint");
+var t=setInterval(function(){
+ s--;
+ if(s<=0){clearInterval(t);window.location.href="index.html";}
+ else{hint.textContent="Redirecting in "+s+"s…";}
+},1000);
+</script>
+</body>
+</html>
