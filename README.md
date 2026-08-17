@@ -1,6 +1,6 @@
 # cv/dev — Portfolio & Resume Site
 
-Full-Stack Developer & Web Designer ✦ Game Modding ✦ Cybersecurity & SysAdmin
+Full-Stack Developer & Web Designer & Game Modding & Cybersecurity & System Administration
 
 **Live site:** [depressiveforever.github.io/portfolio](https://depressiveforever.github.io/portfolio/)
 
